@@ -50,7 +50,6 @@ public class Snack
         return cost * num;
     }
 
-    // setters
     public void setName(String name)
     {
         this.name = name;
