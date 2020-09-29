@@ -6,7 +6,7 @@ public class VendingMachine
 	private int id;
 	private String name;
 
-	public Snack(String name)
+	public VendingMachine(String name)
 	{
 		maxId++;
 		id = maxId;
