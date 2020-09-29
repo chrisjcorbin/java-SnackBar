@@ -1,53 +1,48 @@
 package snackbarApp;
 
-public class Customer
+public class Customer 
 {
-	{
-	private static int maxId = 0;
-	private int id;
-	private String name;
-	private double cash;
+    private static int maxId = 0;
+    private int id;
+    private String name;
+    private double cashOnHand;
 
-	public Customer(String name)
-	{
-		maxId++;
-		id = maxId;
+    public Customer(String name, double cashOnHand)
+    {
+        maxId++;
+        id = maxId;
 
-		this.name = name;
-	}
+        this.name = name;
+        this.cashOnHand = cashOnHand;
+    }
 
-	public int getId()
-	{
-		return id;
-	}
+    public int getId()
+    {
+        return id;
+    }
 
-	public void setId(int id)
-	{
-		this.id = id;
-	}
+    public String getName()
+    {
+        return name;
+    }
 
-	public String getName()
-	{
-		return name;
-	}
+    public double getCashOnHand()
+    {
+        return cashOnHand;
+    }
 
-	public void setName(String name)
-	{
-		this.name = name;
-	}
+    public void setName(String name)
+    {
+        this.name = name;
+    }
 
-	public void addCash(double addCash)
-	{
-		this.cash += addCash;
-	}
+    public void addCash(double cash)
+    {
+        this.cashOnHand += cash;
+    }
 
-	public double cash(double cash)
-	{
-		return cash;
-	}
-
-	public double change(double totalCost)
-	{
-		this.cash = cash - totalCost;
-	}
+    public void buySnacks(double costOfSnacks)
+    {
+        this.cashOnHand = this.cashOnHand - costOfSnacks;
+    }
 }
